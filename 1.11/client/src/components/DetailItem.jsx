@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { getOneItem } from "../redux/actions/servisesActions";
 import axios from "axios";
 import Loader from "./Loader/Loader";
 import Card from 'react-bootstrap/Card';
+
 export default function DetailItem() {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
-  const dispatch = useDispatch();
   const [data, setData] = useState([]);
 
   useEffect(() => {

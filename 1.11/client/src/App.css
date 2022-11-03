@@ -63,7 +63,7 @@ body {
 }
 
 .cardItem {
-  border: solid teal 2px;
+  border: solid rgb(48, 136, 187) 2px;
   border-radius: 7px;
   margin: 0 auto;
   margin-top: 150px;
@@ -105,4 +105,11 @@ body {
   height: 50px;
   padding: 5px;
   font-size: 25px;
+}
+
+.blockTestError {
+  margin-top: 50px;
+  width: 250px;
+  margin: 0 auto;
+  color: rgb(48, 143, 187);
 }

@@ -1,4 +1,4 @@
-import { GET_ONE_SERVISE, GET_SERVISES } from "../types";
+import { GET_SERVISES } from "../types";
 
 function servicesReducer(state = [], action) {
   const { type, payload } = action;
@@ -7,12 +7,7 @@ function servicesReducer(state = [], action) {
  
       return payload;
     }
-    // case GET_ONE_SERVISE: {
  
-    //   const oneServise = state.filter(el => el.id === 'aafa92f0-59e3-11ed-8a7f-9766836d158c')
-     
-    //   return oneServise
-    // }
     default: {
       return state;
     }

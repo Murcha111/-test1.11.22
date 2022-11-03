@@ -1,2 +1,2 @@
  export const GET_SERVISES = 'GET_SERVISES'  
-export const GET_ONE_SERVISE = 'GET_ONE_SERVISE'
+

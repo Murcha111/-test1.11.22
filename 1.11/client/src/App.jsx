@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import DetailItem from "./components/DetailItem";
-import { ErrorBoundary, useErrorHandler } from "react-error-boundary";
+import { ErrorBoundary } from "react-error-boundary";
 
 import MyList from "./components/MyList";
 import { useState } from "react";
@@ -14,7 +14,6 @@ import Loader from "./components/Loader/Loader";
 
 function App() {
   const [userName, setUserName] = useState("");
-
   const [loader, setLoader] = useState(false);
   const [reload, setReload] = useState(false);
   const dispatch = useDispatch();
@@ -51,15 +50,16 @@ function App() {
               <Route path=":id/details" element={<DetailItem />} />
             </Routes>
 
-            <Err userName={userName} />
-
-            <input
-              value={userName}
-              onChange={(e) => {
-                setUserName(e.target.value);
-              }}
-            />
-            <button>click</button>
+            <div className="blockTestError">
+              <Err userName={userName} />
+              <input
+                value={userName}
+                onChange={(e) => {
+                  setUserName(e.target.value);
+                }}
+              />
+              <button>click</button>
+            </div>
           </>
         )}
       </ErrorBoundary>
